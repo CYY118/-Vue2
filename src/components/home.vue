@@ -41,7 +41,7 @@
             <!-- 爱情买卖 -->
             <li @click="$router.push({path: '/love'})">
               <div class="my-menu">
-                💋 <span>爱情买卖</span>
+                💋 <span>小甜心</span>
               </div>
             </li>
 

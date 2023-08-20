@@ -119,6 +119,10 @@ const routes = [
       path: '/resourcePathList',
       name: 'resourcePathList',
       component: () => import('../components/admin/resourcePathList')
+    }, {
+      path: '/menu',
+      name: 'menu',
+      component: () => import('../components/admin/menu')
     }]
   },
   {

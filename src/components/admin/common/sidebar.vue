@@ -66,6 +66,11 @@
           index: "/postList",
           title: "文章管理",
           isBoss: false
+        },{
+          icon: "el-icon-postcard",
+          index: "/menu",
+          title: "菜单管理",
+          isBoss: false
         }, {
           icon: "el-icon-notebook-2",
           index: "/sortList",
@@ -112,7 +117,8 @@
 
     },
 
-    methods: {}
+    methods: {
+    }
   }
 </script>
 
