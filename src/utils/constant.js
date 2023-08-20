@@ -1,11 +1,11 @@
 export default {
-  baseURL: "http://localhost:8081",
-  imBaseURL: "http://localhost:81",
-  webURL: "http://localhost",
+  baseURL: "http://39.106.62.65:8113",
+  imBaseURL: "http://39.106.62.65:8114",
+  webURL: "http://39.106.62.65:8112",
 
-  // baseURL: "https://poetize.cn/api",
-  // imBaseURL: "https://poetize.cn/im",
-  // webURL: "https://poetize.cn",
+  // baseURL: "http://localhost:8113",
+  // imBaseURL: "http://localhost:8114",
+  // webURL: "http://localhost:8112",
 
   live2d_path: "https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/",
   cdnPath: "https://cdn.jsdelivr.net/gh/fghrsh/live2d_api/",
@@ -16,16 +16,18 @@ export default {
   jinrishici: "https://v1.jinrishici.com/all.json",
   random_image: "https://s1.ax1x.com/2022/12/04/zsKgDs.jpg?",
   //前后端定义的密钥，AES使用16位
+  //2ILF-3WqT797UognpJ4SsHobur9TqRLx458WPLw2
+  //yplAV7Djxr2D4_inPCxujbjH6kT9l0P3Me-FkmUE
   cryptojs_key: "aoligeimeimaobin",
   qiniuUrl: "https://upload.qiniup.com",
-  qiniuDownload: "$$$$七牛云下载地址",
+  qiniuDownload: "http://rzmebefq4.hd-bkt.clouddn.com/",
 
   favoriteVideo: "$$$$自己找一个视频链接作为百宝箱的封面",
 
   loveWeiYan: "https://s1.ax1x.com/2022/12/04/zsKgDs.jpg",
   loveMessage: "https://s1.ax1x.com/2022/12/04/zsKgDs.jpg",
   lovePhoto: "https://s1.ax1x.com/2022/12/04/zsKh5V.jpg",
-  loveLike: "https://cdn.cbd.int//hexo-butterfly-envelope/lib/violet.jpg",
+  loveLike: "https://gitee.com/yangstudys/typora-pic/raw/master/prcture/202308192201427.svg",
   loveSortId: 1,
   loveLabelId: 1,
 
