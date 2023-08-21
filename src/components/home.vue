@@ -24,11 +24,11 @@
         <!-- 导航列表 -->
         <div v-else>
           <ul class="scroll-menu">
-            <li @click="$router.push({path: '/'})">
-              <div class="my-menu">
-                🏡 <span>首页</span>
-              </div>
-            </li>
+<!--            <li @click="$router.push({path: '/'})">-->
+<!--              <div class="my-menu">-->
+<!--                🏡 <span>首页</span>-->
+<!--              </div>-->
+<!--            </li>-->
 
 <!--            <li v-for="(menu, index) in $store.getters.navigationBar"-->
 <!--                @click="$router.push({path: '/sort', query: {sortId: menu.id, labelId: menu.labels[0].id}})"-->
@@ -38,56 +38,61 @@
 <!--              </div>-->
 <!--            </li>-->
 
-            <!-- 爱情买卖 -->
-            <li @click="$router.push({path: '/love'})">
-              <div class="my-menu">
-                💋 <span>小甜心</span>
-              </div>
-            </li>
+<!--            &lt;!&ndash; 爱情买卖 &ndash;&gt;-->
+<!--            <li @click="$router.push({path: '/love'})">-->
+<!--              <div class="my-menu">-->
+<!--                💋 <span>小甜心</span>-->
+<!--              </div>-->
+<!--            </li>-->
 
-            <!-- 旅拍 -->
-            <li @click="$router.push({path: '/travel'})">
-              <div class="my-menu">
-                🌏 <span>旅拍</span>
-              </div>
-            </li>
+<!--            &lt;!&ndash; 旅拍 &ndash;&gt;-->
+<!--            <li @click="$router.push({path: '/travel'})">-->
+<!--              <div class="my-menu">-->
+<!--                🌏 <span>旅拍</span>-->
+<!--              </div>-->
+<!--            </li>-->
 
-            <!-- 百宝箱 -->
-            <li @click="$router.push({path: '/favorite'})">
-              <div class="my-menu">
-                🧰 <span>百宝箱</span>
-              </div>
-            </li>
+<!--            &lt;!&ndash; 百宝箱 &ndash;&gt;-->
+<!--            <li @click="$router.push({path: '/favorite'})">-->
+<!--              <div class="my-menu">-->
+<!--                🧰 <span>百宝箱</span>-->
+<!--              </div>-->
+<!--            </li>-->
 
-            <!-- 聊天室 -->
-            <li @click="goIm()">
-              <div class="my-menu">
-                💬 <span>非礼勿言</span>
-              </div>
-            </li>
-            <!-- 音乐 -->
-            <li @click="$router.push({path: '/funny'})">
-              <div class="my-menu">
-                🎺 <span>曲乐</span>
-              </div>
-            </li>
-            <!-- 留言 -->
-            <li @click="$router.push({path: '/message'})">
-              <div class="my-menu">
-                📪 <span>留言</span>
-              </div>
-            </li>
-            <!-- 友人帐 -->
-            <li @click="$router.push({path: '/friend'})">
-              <div class="my-menu">
-                💃 <span>友人帐</span>
-              </div>
-            </li>
+<!--            &lt;!&ndash; 聊天室 &ndash;&gt;-->
+<!--            <li @click="goIm()">-->
+<!--              <div class="my-menu">-->
+<!--                💬 <span>非礼勿言</span>-->
+<!--              </div>-->
+<!--            </li>-->
+<!--            &lt;!&ndash; 音乐 &ndash;&gt;-->
+<!--            <li @click="$router.push({path: '/funny'})">-->
+<!--              <div class="my-menu">-->
+<!--                🎺 <span>曲乐</span>-->
+<!--              </div>-->
+<!--            </li>-->
+<!--            &lt;!&ndash; 留言 &ndash;&gt;-->
+<!--            <li @click="$router.push({path: '/message'})">-->
+<!--              <div class="my-menu">-->
+<!--                📪 <span>留言</span>-->
+<!--              </div>-->
+<!--            </li>-->
+<!--            &lt;!&ndash; 友人帐 &ndash;&gt;-->
+<!--            <li @click="$router.push({path: '/friend'})">-->
+<!--              <div class="my-menu">-->
+<!--                💃 <span>友人帐</span>-->
+<!--              </div>-->
+<!--            </li>-->
 
-            <!-- 关于 -->
-            <li @click="$router.push({path: '/about'})">
+<!--            &lt;!&ndash; 关于 &ndash;&gt;-->
+<!--            <li @click="$router.push({path: '/about'})">-->
+<!--              <div class="my-menu">-->
+<!--                🐟 <span>关于</span>-->
+<!--              </div>-->
+<!--            </li>-->
+            <li v-for="item in menuList" :key="item.id" @click="jumpPage(item,item.path)">
               <div class="my-menu">
-                🐟 <span>关于</span>
+                <span>{{item.title}}</span>
               </div>
             </li>
             <!-- 个人中心 -->
@@ -171,11 +176,11 @@
                direction="ltr">
       <div>
         <ul class="small-menu">
-          <li @click="smallMenu({path: '/'})">
-            <div>
-              🏡 <span>首页</span>
-            </div>
-          </li>
+<!--          <li @click="smallMenu({path: '/'})">-->
+<!--            <div>-->
+<!--              🏡 <span>首页</span>-->
+<!--            </div>-->
+<!--          </li>-->
 
 <!--          <li v-for="(menu, index) in $store.getters.navigationBar"-->
 <!--              @click="smallMenu({path: '/sort', query: {sortId: menu.id, labelId: menu.labels[0].id}})"-->
@@ -186,58 +191,62 @@
 <!--          </li>-->
 
           <!-- 爱情买卖 -->
-          <li @click="smallMenu({path: '/love'})">
-            <div>
-              💋 <span>爱情买卖</span>
-            </div>
-          </li>
+<!--          <li @click="smallMenu({path: '/love'})">-->
+<!--            <div>-->
+<!--              💋 <span>小甜心</span>-->
+<!--            </div>-->
+<!--          </li>-->
 
           <!-- 旅拍 -->
-          <li @click="smallMenu({path: '/travel'})">
-            <div>
-              🌏 <span>旅拍</span>
-            </div>
-          </li>
+<!--          <li @click="smallMenu({path: '/travel'})">-->
+<!--            <div>-->
+<!--              🌏 <span>旅拍</span>-->
+<!--            </div>-->
+<!--          </li>-->
 
           <!-- 百宝箱 -->
-          <li @click="smallMenu({path: '/favorite'})">
-            <div>
-              🧰 <span>百宝箱</span>
-            </div>
-          </li>
+<!--          <li @click="smallMenu({path: '/favorite'})">-->
+<!--            <div>-->
+<!--              🧰 <span>百宝箱</span>-->
+<!--            </div>-->
+<!--          </li>-->
 
           <!-- 聊天室 -->
-          <li @click="goIm()">
-            <div>
-              💬 <span>非礼勿言</span>
-            </div>
-          </li>
+<!--          <li @click="goIm()">-->
+<!--            <div>-->
+<!--              💬 <span>非礼勿言</span>-->
+<!--            </div>-->
+<!--          </li>-->
           <!-- 音乐 -->
-          <li @click="smallMenu({path: '/funny'})">
-            <div>
-              🎺 <span>曲乐</span>
-            </div>
-          </li>
+<!--          <li @click="smallMenu({path: '/funny'})">-->
+<!--            <div>-->
+<!--              🎺 <span>曲乐</span>-->
+<!--            </div>-->
+<!--          </li>-->
           <!-- 留言 -->
-          <li @click="smallMenu({path: '/message'})">
-            <div>
-              📪 <span>留言</span>
-            </div>
-          </li>
+<!--          <li @click="smallMenu({path: '/message'})">-->
+<!--            <div>-->
+<!--              📪 <span>留言</span>-->
+<!--            </div>-->
+<!--          </li>-->
           <!-- 友人帐 -->
-          <li @click="smallMenu({path: '/friend'})">
-            <div>
-              💃 <span>友人帐</span>
-            </div>
-          </li>
+<!--          <li @click="smallMenu({path: '/friend'})">-->
+<!--            <div>-->
+<!--              💃 <span>友人帐</span>-->
+<!--            </div>-->
+<!--          </li>-->
 
           <!-- 关于 -->
-          <li @click="smallMenu({path: '/about'})">
+<!--          <li @click="smallMenu({path: '/about'})">-->
+<!--            <div>-->
+<!--              🐟 <span>关于</span>-->
+<!--            </div>-->
+<!--          </li>-->
+          <li v-for="item in menuList" :key="item.id" @click="smallJumpPage(item,item.path)">
             <div>
-              🐟 <span>关于</span>
+              <span>{{item.title}}</span>
             </div>
           </li>
-
           <template v-if="$common.isEmpty($store.state.currentUser)">
             <li @click="smallMenu({path: '/user'})">
               <div>
@@ -272,6 +281,7 @@
   export default {
     data() {
       return {
+        menuList:[],
         toolButton: false,
         hoverEnter: false,
         mouseAnimation: false,
@@ -328,6 +338,7 @@
       },
     },
     created() {
+      this.getMenu()
       let toolbarStatus = {
         enter: false,
         visible: true,
@@ -353,6 +364,45 @@
       }
     },
     methods: {
+      jumpPage(item,url){
+        if (item.isOutSide){
+          if (item.isLogin){
+            this.goPageLogin(url)
+          }else {
+            this.goPageNotLogin(url)
+          }
+        }else{
+          this.$router.push({path: url})
+        }
+      },
+      smallJumpPage(item,url){
+        if (item.isOutSide){
+          if (item.isLogin){
+            this.goPageLogin(url)
+          }else {
+            this.goPageNotLogin(url)
+          }
+        }else{
+          this.$router.push({path: url})
+          this.toolbarDrawer = false;
+        }
+      },
+      getMenu(){
+        let url="/navigation/getNavigationV2"
+        this.$http.get(this.$constant.baseURL + url, this.pagination, true)
+          .then((res) => {
+            if (!this.$common.isEmpty(res.data)) {
+              this.menuList = res.data;
+              console.log("this.menuList:>>>",this.menuList)
+            }
+          })
+          .catch((error) => {
+            this.$message({
+              message: error.message,
+              type: "error"
+            });
+          });
+      },
       smallMenu(data) {
         this.$router.push(data)
         this.toolbarDrawer = false;
@@ -373,6 +423,20 @@
           let userToken = this.$common.encrypt(localStorage.getItem("userToken"));
           window.open(this.$constant.imBaseURL + "?userToken=" + userToken);
         }
+      },
+      goPageLogin(url) {
+        if (this.$common.isEmpty(this.$store.state.currentUser)) {
+          this.$message({
+            message: "请先登录！",
+            type: "error"
+          });
+        } else {
+          let userToken = this.$common.encrypt(localStorage.getItem("userToken"));
+          window.open(url + "?userToken=" + userToken);
+        }
+      },
+      goPageNotLogin(url) {
+        window.open(url);
       },
       logout() {
         this.$http.get(this.$constant.baseURL + "/user/logout")

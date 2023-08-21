@@ -50,6 +50,15 @@
           <el-switch @click.native="changeStatus(scope.row, 1)" v-model="scope.row.isEnable"></el-switch>
         </template>
       </el-table-column>
+      <el-table-column prop="isLogin" label="是否提前登录" align="center">
+        <template slot-scope="scope">
+          <el-tag :type="scope.row.isLogin === false ? 'danger' : 'success'"
+                  disable-transitions>
+            {{scope.row.isLogin === false ? '否' : '是'}}
+          </el-tag>
+          <el-switch @click.native="changeStatus(scope.row, 3)" v-model="scope.row.isLogin"></el-switch>
+        </template>
+      </el-table-column>
       <el-table-column label="操作" width="180" align="center">
         <template slot-scope="scope">
           <el-button type="text" icon="el-icon-edit" style="color: var(--blue)" @click="updateMenu(scope.row)">
@@ -112,6 +121,13 @@
             </el-tag>
             <el-switch v-model="menuForm.isEnable"></el-switch>
           </el-form-item>
+          <el-form-item label="是否需要提前登录" prop="isLogin">
+            <el-tag :type="menuForm.isLogin === false ? 'danger' : 'success'"
+                    disable-transitions>
+              {{menuForm.isLogin === false ? '否' : '是'}}
+            </el-tag>
+            <el-switch @click.native="changeStatus(scope.row, 3)" v-model="menuForm.isLogin"></el-switch>
+          </el-form-item>
         </el-form>
       </div>
 
@@ -143,6 +159,7 @@ export default {
         type: 0,
         isOutSide: null,
         isEnable: null,
+        isLogin: null,
       },
       menuList: [],
       typeOptions:[
@@ -204,6 +221,11 @@ export default {
           id: item.id,
           isOutSide: item.isOutSide?1:0,
         }
+      }else if (flag===3){
+        param={
+          id: item.id,
+          isLogin: item.isLogin?1:0,
+        }
       }
       this.$http.post(this.$constant.baseURL + "/navigation/saveNavigation", param, true)
         .then((res) => {
@@ -241,11 +263,9 @@ export default {
       }
     },
     getMenu(){
-      console.log("ceshicew测试：》》》》》")
       let url="/navigation/getNavigation"
       this.$http.get(this.$constant.baseURL + url, this.pagination, true)
         .then((res) => {
-          console.log("ceshicew测试：》》》》》",res)
           if (!this.$common.isEmpty(res.data)) {
             this.menuList = res.data;
             this.pagination.total = res.data.total;
