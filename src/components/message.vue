@@ -69,7 +69,7 @@
               res.data.forEach(m => {
                 this.barrageList.push({
                   id: m.id,
-                  avatar: m.avatar,
+                  avatar: m.avatar===null?'https://gitee.com/yangstudys/note/raw/master/typora/head/head57.jpg':m.avatar,
                   msg: m.message,
                   time: Math.floor(Math.random() * 10 + 5)
                 });

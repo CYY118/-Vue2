@@ -1,5 +1,5 @@
 <template>
-  <div class="my-header myBetween">
+  <div class="my-header myBetween" :style="headerStyle">
     <div class="logo">后台管理</div>
     <div class="header-right">
       <div class="admin-index" @click="$router.push({path: '/'})">
@@ -41,7 +41,9 @@
 <script>
   export default {
     data() {
-      return {}
+      return {
+        headerStyle:"background-color: rgb(156 226 212)"
+      }
     },
 
     computed: {},

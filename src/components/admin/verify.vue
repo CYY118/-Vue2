@@ -68,6 +68,7 @@
               this.password = "";
               this.$router.push({path: this.redirect});
             }
+          //   在这里将会获取当前用户得相关配置信息
           })
           .catch((error) => {
             this.$message({

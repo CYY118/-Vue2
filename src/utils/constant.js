@@ -1,11 +1,11 @@
 export default {
-  // baseURL: "http://39.106.62.65:8113",
-  // imBaseURL: "http://39.106.62.65:8114",
-  // webURL: "http://39.106.62.65:8112",
+  baseURL: "http://39.106.62.65:8113",
+  imBaseURL: "http://39.106.62.65:8114",
+  webURL: "http://39.106.62.65:8112",
 
-  baseURL: "http://localhost:8113",
-  imBaseURL: "http://localhost:8114",
-  webURL: "http://localhost:8112",
+  // baseURL: "http://localhost:8113",
+  // imBaseURL: "http://localhost:8114",
+  // webURL: "http://localhost:8112",
 
   live2d_path: "https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget@latest/",
   cdnPath: "https://cdn.jsdelivr.net/gh/fghrsh/live2d_api/",
@@ -22,7 +22,7 @@ export default {
   qiniuUrl: "https://upload.qiniup.com",
   qiniuDownload: "http://rzmebefq4.hd-bkt.clouddn.com/",
 
-  favoriteVideo: "$$$$自己找一个视频链接作为百宝箱的封面",
+  favoriteVideo: "http://rzmebefq4.hd-bkt.clouddn.com/love/video/share_a2ddeedc15b8c7c8043b19a70568d7b1.mp4",
 
   loveWeiYan: "https://s1.ax1x.com/2022/12/04/zsKgDs.jpg",
   loveMessage: "https://s1.ax1x.com/2022/12/04/zsKgDs.jpg",
